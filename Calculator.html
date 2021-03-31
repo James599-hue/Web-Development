@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Calculator
+	</title>
+	<style type="text/css">
+		input,select,button{ border-radius: 10px }
+	</style>
+</head>
+<body>
+	<h1>Calculator</h1>
+	Enter the first number: <input type="text" id="fn"><br><br>
+	Enter the second number: <input type="text" id="sn"><br><br>
+	Select operation <select id="op">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="**">**</option>
+	</select>
+	<button onclick="calc()">=</button><br><br>
+	Answer: <input type="text" id="ans">
+	<script type="text/javascript">
+		function calc(){
+			var first =parseInt(document.getElementById('fn').value);
+			var second =parseInt(document.getElementById('sn').value);
+			var oper = document.getElementById('op').value;
+			switch(oper){
+				case "+":
+				 document.getElementById('ans').value= first+second;
+				 break;
+
+				 case "-":
+				 document.getElementById('ans').value= first-second;
+				 break;
+
+				 case "*":
+				 document.getElementById('ans').value= first*second;
+				 break;
+
+				 case "/":
+				 document.getElementById('ans').value= first/second;
+				 break
+
+				 case "**":
+				 document.getElementById('ans').value= first**second
+
+
+			}
+		}
+	</script>
+	
+
+	
+
+</body>
+</html>
